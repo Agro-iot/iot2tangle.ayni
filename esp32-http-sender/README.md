@@ -1,26 +1,3 @@
-# ESP32 with I2T Sensors Stack  --  HTTP Protocol
-
-ESP32 is one of the microcontrollers for *IoT applications* par excellence. It is widely used for both educational and industrial development due to its great versatility, reliability and low cost. At *I2T* we wanted to add it due to its extensive use in the development community.
-
-# Setting up your ESP32 with the I2T Sensors Stack
-
-This is the list of Sensors/Modules that you can connect and it will be recognized immediately.
-- ***BME280*** (*Bosch*) - Temperature, Humidity and Pressure sensor. -> Connected by *I2C Bus* via: *GPIO33/SDA* and *GPIO32/SCL* --- Be careful with the supply of this sensor, the BM280 is powered with 3.3V, if your module does not have a voltage regulator (some modules do not have it) the sensor can be damaged if you supply 5V.
-- ***MPU6050*** (*InvenSense-TDK*) - Acelerometer and Gyroscope 6-axis. -> Connected by *I2C Bus* via: *GPIO33/SDA* and *GPIO32/SCL*.
-- ***BH1750*** (*ROHM*) - Ambient Light Sensor. -> Connected by *I2C Bus* via: *GPIO33/SDA* and *GPIO32/SCL*.
-- ***Generic Adjustable Sound Sensor with digital output*** (like *KY038 Module*) - -> Digital Signal on *GPIO21*, *GPIO22* to GND (to enable sound data collection).
-- Also, you can connect a ***Green LED*** in *GPIO2* that blink when the data is sent to the Tangle, and a ***Red LED*** in *GPIO15* that will Blink in a certain way when it detects certain errors (totally optional)
-
-## Connecting the sensors
-
-The following diagram explains how each sensor of our stack must be connected to the ESP32 pins. The "NodeMCU-32s" development board has been used in this diagram, which contains the ESP32 microcontroller. However, any development board that contains the ESP32 microcontroller can be used.
-
-![I2T Sensors Stack on ESP32](https://iot2tangle.io/assets/screenshots/ESP32-I2T.png)
-
-**It is not necessary to have all the sensors listed here**, the code is able to detect which sensors were connected. In the case of not connecting any sensor, the only real data that will be displayed on the Tangle will be the Internal Temperature of *ESP32*.
-
-***IMPORTANT NOTE:*** *Espressif has deprecated the ESP32's internal temperature sensor a few years ago, as it has proven not to be a very accurate measurement. However we will use it as a minimum unit of information to be able to send data to the Tangle without having sensors connected. Please keep this in mind, so this value should not be taken into account for critical applications.*
-
 # Download Firmware on ESP32
 This repository uses the ***Iot2Tangle C Core devices*** adapted for ***ESP32-FreeRTOS*** offered in the official *Espressif Toolchain ESP-IDF SDK*. Once the SDK is installed you will have all the tools to compile and download the program on your ESP32.
 
@@ -53,11 +30,11 @@ cd ~/esp-idf
 ```
 After doing this last step do not close the shell, as we will compile and flash from here. If you close the shell you will have to do the previous step again.
 
-## 2) Download the Iot2Tangle ESP32 Repository and go to the 'http-sender' folder:
+## 2) Download the Ayni Iot2Tangle ESP32 Repository and go to the 'http-sender' folder:
 You can download the repository directly from Github, or from shell or Command Prompt with the following command:
 ```
-git clone https://github.com/iot2tangle/ESP32.git
-cd ESP32/http-sender
+git clone https://github.com/Agro-iot/iot2tangle.ayni/esp32-http-sender.git
+cd esp32-http-sender
 ```
 ## 3) Edit the file config.h
 The *config.h* file must be opened and modified, this file is in the directory *'ESP32/http-sender/main'* of the repository.
