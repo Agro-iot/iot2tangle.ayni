@@ -33,8 +33,8 @@ After doing this last step do not close the shell, as we will compile and flash 
 ## 2) Download the Ayni Iot2Tangle ESP32 Repository and go to the 'http-sender' folder:
 You can download the repository directly from Github, or from shell or Command Prompt with the following command:
 ```
-git clone https://github.com/Agro-iot/iot2tangle.ayni/esp32-http-sender.git
-cd esp32-http-sender
+git clone https://github.com/Agro-iot/iot2tangle.ayni.git
+cd iot2tangle.ayni/esp32-http-sender
 ```
 ## 3) Edit the file config.h
 The *config.h* file must be opened and modified, this file is in the directory *'ESP32/http-sender/main'* of the repository.
