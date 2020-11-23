@@ -11,7 +11,7 @@ For this project we used [I2T Standard](https://github.com/iot2tangle), [IOTA St
 ## Overview and Background
 The environmental cost of our logistics, pesticides and plastic pollution, among others, are accelerating the shift of water cycles around the globe. As a result, rain patterns are changing at accelerated rates, leading us to unknown scenarios. This fact highlights the urgency of a new type of distributed agriculture with low environmental footprint and enhanced use of allocated resources, by new designs and ongoing analysis of production data.
 
-In addition, Aquaponics and Hydroponics are a proven techniques that has been picking up in adoption recently due to its low environmental footprint, inherent efficiencies, and healthier products. 
+In addition, Aquaponics and Hydroponics are proven techniques that has been picking up in adoption recently due to its low environmental footprint, inherent efficiencies, and healthier products. 
 
 Ayni means “to help” in quechua; our project aims to help small farmers to discover the benefits Hydroponics and Aquaponics by developing an automated system integrated with IOTA Tangle.
 
@@ -19,4 +19,4 @@ Ayni means “to help” in quechua; our project aims to help small farmers to d
 Ayni, thanks to IOTA, could be adapted to sell produced goods through friction-less micro-payments with production data and without intermediaries, to sell performance data, and optimize the growth process of vegetables and fish.
 
 ### Future Challenges
-For this project we started with a Hydroponic approach, but in the future we will transition to an Aquaponic System. In its simplest form, aquaponics replicates the nature by growing fish and vegetables providing huge efficiencies related to land and water use, removing the need of pesticides and antibiotics. An aquaponic system creates a symbiotic relationship between all the organisms within the system and is always aiming to reach its homeostasis.
+For this project we started with a Hydroponic approach, but in the future, we will transition to an Aquaponic System. In its simplest form, aquaponics replicates the nature by growing fish and vegetables providing huge efficiencies related to land and water use, removing the need of pesticides and antibiotics. An aquaponic system creates a symbiotic relationship between all the organisms within the system and is always aiming to reach its homeostasis.
