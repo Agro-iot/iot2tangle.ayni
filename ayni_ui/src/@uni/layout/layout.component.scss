@@ -1,0 +1,50 @@
+.scroll-fixed {
+  overflow: hidden;
+}
+.scroll-fixed main {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidenav {
+  background: var(--sidenav-background);
+
+  ::ng-deep .mat-drawer-inner-container {
+    overflow: hidden;
+  }
+}
+
+.layout-container {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.layout-content {
+  //background: var(--background-base);
+  min-height: calc(100% - var(--toolbar-height));
+  position: relative;
+  width: 100%;
+}
+
+.sidenav-container {
+  background: var(--background-base);
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.toolbar-fixed {
+  ::ng-deep .uni-toolbar {
+    position: fixed;
+    // width: var(--toolbar-width);
+    z-index: 50;
+  }
+
+  .layout-content {
+    margin-top: calc(var(--toolbar-height));
+  }
+}

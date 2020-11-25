@@ -1,0 +1,9 @@
+<ng-template #sidenavRef>
+    <uni-sidenav></uni-sidenav>
+  </ng-template>
+  <ng-template #toolbarRef>
+    <uni-toolbar [mobileQuery]="!(isDesktop$ | async)" class="uni-toolbar"></uni-toolbar>
+  </ng-template>
+  
+  <uni-layout [sidenavRef]="sidenavRef"
+                [toolbarRef]="toolbarRef"></uni-layout>

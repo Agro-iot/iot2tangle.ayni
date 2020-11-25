@@ -1,0 +1,59 @@
+:root {
+  // Background
+  --background-base: rgb(245, 245, 248);
+  --background-card: white;
+  --background-app-bar: #ebebee;
+  --background-hover: rgba(0, 0, 0, 0.04);
+  --background-primary: #1976d2;
+
+  // Sidenav
+  //--sidenav-width: 280px;
+  --sidenav-width: 250px;
+  --sidenav-toolbar-height: 100px;
+  --sidenav-collapsed-width: 72px;
+  --sidenav-background: white;
+  --sidenav-color: black;
+
+  // Sidenav Item
+  --sidenav-item-padding: 1.5rem;
+  --sidenav-item-background-active: rgba(0,0,0,.04);
+  --sidenav-item-color: #a1a2b6;
+  --sidenav-item-color-subheading: rgba(0,0,0,.54);
+  --sidenav-item-color-active: #1976d2;
+  --sidenav-item-icon-color: #494b74;
+  --sidenav-item-icon-color-active: #5c77ff;
+  --sidenav-item-icon-gap: 16px;
+  --sidenav-item-icon-size: 24px;
+
+  // Toolbar
+  --toolbar-height: 64px;
+  --toolbar-background: var(--background-primary);
+  --toolbar-color: white;
+
+  // Navigation
+  --navigation-color: white;
+
+  // other
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --blink-scrollbar-width: 12px;
+
+  --trans-ease-in-out: all var(--trans-ease-in-out-duration) var(--trans-ease-in-out-timing-function);
+  --trans-ease-in-out-duration: 500ms;
+  --trans-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+  --trans-ease-out: all var(--trans-ease-out-duration) var(--trans-ease-out-timing-function);
+  --trans-ease-out-duration: 400ms;
+  --trans-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  --trans-ease-in: all var(--trans-ease-in-duration) var(--trans-ease-in-timing-function);
+  --trans-ease-in-duration: 300ms;
+  --trans-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+
+  --padding: 1.5rem;
+  --padding-16: 1rem;
+  --padding-12: 0.75rem;
+  --padding-8: 0.5rem;
+  --padding-4: 0.25rem;
+
+  --sidenav-item-dropdown-background: #141924;
+  --sidenav-item-dropdown-background-hover: #131721;
+  --sidenav-item-dropdown-gap: 12px;
+}

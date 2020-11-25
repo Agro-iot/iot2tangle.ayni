@@ -1,0 +1,10 @@
+<div class="sidenav flex flex-col">
+    <div class="sidenav-toolbar flex">
+        <img src="assets/img/ayni_36.png" class="w-8 select-none flex-none">
+        <h2 class="select-none m-0 pl-5">AYNI</h2>
+    </div>
+    <div uniScrollbar>
+        <uni-sidenav-item *ngFor="let item of items; trackBy: trackByRoute" [item]="item" [level]="0">
+        </uni-sidenav-item>
+    </div>
+</div>

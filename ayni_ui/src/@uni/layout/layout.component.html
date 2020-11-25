@@ -1,0 +1,20 @@
+<div class="layout-container ">
+
+    <!-- <ng-container *ngTemplateOutlet="toolbarRef"></ng-container> -->
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav 
+                     [disableClose]="isDesktop$ | async"
+                     [fixedInViewport]="!(isDesktop$ | async)"
+                     [opened]="!(isDesktop$ | async) && activeOpened"
+                     mode="over" 
+                     class="sidenav">
+            <ng-container *ngTemplateOutlet="sidenavRef"></ng-container>
+        </mat-sidenav>
+        <mat-sidenav-content class="sidenav-content scroll-fixed" fxLayout="column">
+            <ng-container *ngTemplateOutlet="toolbarRef"></ng-container>
+            <main class="layout-content" cdkScrollable fxFlex="auto" fxLayout="column">
+                <router-outlet></router-outlet>
+            </main>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

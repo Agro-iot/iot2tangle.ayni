@@ -1,0 +1,60 @@
+<div class="toolbar w-full ph-10" fxLayout="row" fxLayoutAlign="start center">
+
+    <button (click)="openSidenav()" [fxHide]="!mobileQuery" mat-icon-button type="button">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <a class="mr-20" fxLayout="row" fxLayoutAlign="start center">
+        <img class="w-8 select-none" src="assets/img/ayni_36.png">
+        <h1 [fxHide]="mobileQuery" class="pl-5 m-0 select-none">AYNI</h1>
+    </a>
+    <div class="ph-10" fxFlex="none" fxLayout="row" [fxHide]="mobileQuery" fxLayoutAlign="start center">
+        <uni-navigation-item *ngFor="let item of navigationItems" [item]="item"></uni-navigation-item>
+    </div>
+    <span fxFlex></span>
+    <div class="flex items-center">
+
+        <div class="ph-1">
+            <button mat-icon-button type="button">
+                <mat-icon>notifications</mat-icon>
+            </button>
+        </div>
+        <div class="toolbar-separator"></div>
+        <div class="ph-1">
+            <button [matMenuTriggerFor]="languageMenu" mat-mini-fab color="primary"
+                class="toolbar-language ml-5 mr-5">
+                <span class="text-language">
+                    ES
+                </span>
+            </button>
+        </div>
+        <div class="toolbar-separator"></div>
+        <div class="ph-1">
+            <button [matMenuTriggerFor]="userMenu" mat-icon-button type="button">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+        </div>
+        <mat-menu class="dropdown" #userMenu="matMenu" overlapTrigger="false" xPosition="before" yPosition="below">
+            <div class="content">
+                <div class="list">
+                    <div class="list-item" matRipple mat-menu-item (click)="logout($event)">
+                        <mat-icon class="list-item-icon">exit_to_app</mat-icon>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </mat-menu>
+        <mat-menu #languageMenu="matMenu" overlapTrigger="false" xPosition="before" yPosition="below">
+            <button mat-menu-item>
+                <button mat-mini-fab class="toolbar-language"><span class="text-language">ES</span></button>
+                &nbsp;
+                <span>Spanish</span>
+            </button>
+            <button mat-menu-item>
+                <button mat-mini-fab class="toolbar-language"><span class="text-language">EN</span></button>
+                &nbsp;
+                <span>English</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>

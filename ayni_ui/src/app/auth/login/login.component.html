@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="header p-25 bg-primary" fxLayout="column" fxLayoutAlign="center center">
+        <div class="logo select-none">
+            AYNI
+        </div>
+    </div>
+    <div class="text-center mt-10">
+        <h2 class="m-0">Welcome</h2>
+        <h4 class="text-secondary m-0">Login with your credentials.</h4>
+    </div>
+    <div class="p-25" fxLayout="column" fxLayoutGap="16px" [formGroup]="form">
+        <div fxFlex="auto" fxLayout="column">
+            <mat-form-field fxFlex="grow" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput required formControlName="user">
+                <mat-error *ngIf="form.get('user').hasError('required')">Please enter your username</mat-error>
+            </mat-form-field>
+            <mat-form-field fxFlex="grow" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="inputType" formControlName="password" required>
+                <button type="button" mat-icon-button matSuffix (click)="toggleVisibility()"
+                    matTooltip="Toggle Visibility">
+                    <mat-icon *ngIf="visible">visibility</mat-icon>
+                    <mat-icon *ngIf="!visible">visibility_off</mat-icon>
+                </button>
+                <mat-error *ngIf="form.get('password').hasError('required')">Please enter your password
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button type="button" mat-raised-button (click)="send()" class="bg-primary">
+            SIGN IN
+        </button>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+// @import "@angular/material/_theming.scss";
+@import "~@angular/material/theming";
+
+$default-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+
+$elevation-z8: 0px 5px 5px -3px rgba(82, 63, 104, 0.06), 0px 8px 10px 1px rgba(82, 63, 104, 0.042),
+  0px 3px 14px 2px rgba(82, 63, 104, 0.036);
+
+$config: mat-typography-config(
+  $font-family: $default-font,
+  $display-4: mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3: mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2: mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1: mat-typography-level(34px, 40px, 400),
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(18px, 26px, 500),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(14px, 1.125, 400)
+) !default;
+
+$uni-primary: mat-palette(
+  (
+    50: #e3f2fd,
+    100: #bbdefb,
+    200: #90caf9,
+    300: #64b5f6,
+    400: #42a5f5,
+    500: #2196f3,
+    600: #1e88e5,
+    700: #1976d2,
+    800: #1565c0,
+    900: #0d47a1,
+    contrast: (
+      50: $dark-primary-text,
+      100: $dark-primary-text,
+      200: $dark-primary-text,
+      300: $dark-primary-text,
+      400: $dark-primary-text,
+      500: $light-primary-text,
+      600: $light-primary-text,
+      700: $light-primary-text,
+      800: $light-primary-text,
+      900: $light-primary-text
+    )
+  )
+) !default;
+
+$uni-accent: mat-palette($mat-pink, A200, A100, A400) !default;
+
+$uni-warn: mat-palette($mat-red) !default;;
+
+$uni-theme: (
+  primary: $uni-primary,
+  accent: $uni-accent,
+  warn: $uni-warn,
+  is-dark: false,
+  foreground: $mat-light-theme-foreground,
+  background: $mat-light-theme-background
+) !default;

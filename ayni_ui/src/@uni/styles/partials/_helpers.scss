@@ -1,0 +1,204 @@
+:root {
+  $spaceamounts: (
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    15,
+    20,
+    25,
+    30
+  ); // Adjust this to include the pixel amounts you need.
+  $sides: (top, bottom, left, right); // Leave this variable alone
+
+  @each $space in $spaceamounts {
+    // margin
+    .m-#{$space} {
+      margin: #{$space}px;
+    }
+
+    .mv-#{$space} {
+      margin-top: #{$space}px;
+      margin-bottom: #{$space}px;
+    }
+
+    .mh-#{$space} {
+      margin-left: #{$space}px;
+      margin-right: #{$space}px;
+    }
+
+    // padding
+    .p-#{$space} {
+      padding: #{$space}px;
+    }
+
+    .pv-#{$space} {
+      padding-top: #{$space}px;
+      padding-bottom: #{$space}px;
+    }
+
+    .ph-#{$space} {
+      padding-left: #{$space}px;
+      padding-right: #{$space}px;
+    }
+
+    .s-#{$space} {
+      font-size: #{$space}px;
+    }
+
+    @each $side in $sides {
+      // margin
+      .m#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}px;
+      }
+
+      // padding
+      .p#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}px;
+      }
+    }
+  }
+
+  .uni-scrollbar {
+    min-height: 0;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  blockquote,
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  figure,
+  p,
+  pre {
+    margin: 0;
+  }
+
+  .w-8 {
+    width: 2rem;
+  }
+
+  .card {
+    border-radius: 0.25rem;
+    box-shadow: $elevation-z8;
+    background-color: var(--background-card);
+  }
+
+  .bg-primary {
+    background-color: var(--background-primary);
+    color: white;
+  }
+
+  .select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .pointer {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .vertical-align-super {
+    vertical-align: super;
+  }
+
+  .vertical-align-middle {
+    vertical-align: middle;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .rounded {
+    border-radius: 50%;
+  }
+
+  .display-block {
+    display: block;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .semi-bold {
+    font-weight: 500;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .mh-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .bg-pattern {
+    background: linear-gradient(
+        135deg,
+        #fafafa 22px,
+        rgba(0, 0, 0, 0.04) 22px,
+        rgba(0, 0, 0, 0.04) 24px,
+        transparent 24px,
+        transparent 67px,
+        rgba(0, 0, 0, 0.04) 67px,
+        rgba(0, 0, 0, 0.04) 69px,
+        transparent 69px
+      ),
+      linear-gradient(
+          225deg,
+          #fafafa 22px,
+          rgba(0, 0, 0, 0.04) 22px,
+          rgba(0, 0, 0, 0.04) 24px,
+          transparent 24px,
+          transparent 67px,
+          rgba(0, 0, 0, 0.04) 67px,
+          rgba(0, 0, 0, 0.04) 69px,
+          transparent 69px
+        )
+        0 64px;
+    background-color: #fafafa;
+    background-size: 64px 128px;
+  }
+}

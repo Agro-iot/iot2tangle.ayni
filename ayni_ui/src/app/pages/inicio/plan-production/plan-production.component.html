@@ -1,0 +1,115 @@
+<div fxLayout="row" fxLayoutAlign="start center" class="p-25">
+    <mat-icon class="text-secondary">home</mat-icon>
+    <mat-icon class="text-secondary">chevron_right</mat-icon>
+    <span class="text-secondary">Production</span>
+</div>
+<div style="margin: 25px 25px;">
+    <div class="card" style="max-width: 1024px;margin: auto;padding: 20px;">
+        <div mat-dialog-title>Average Sensor</div>
+        <br>
+        <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="10px" [formGroup]="form">
+            <mat-form-field fxFlex appearance="outline">
+                <mat-label>Planting Date</mat-label>
+                <input name="planting_date" formControlName="planting_date" matInput [matDatepicker]="startDatePicker">
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field fxFlex appearance="outline">
+                <mat-label>Planting Date</mat-label>
+                <input name="harveting_date" formControlName="harveting_date" matInput
+                    [matDatepicker]="startDatePicker2">
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker2"></mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker2></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="10px" [formGroup]="form">
+            <mat-form-field fxFlex appearance="outline">
+                <mat-label>Seed</mat-label>
+                <mat-select formControlName="seed">
+                    <mat-option *ngFor="let itemSeed of listSeed" [value]="itemSeed">
+                        {{itemSeed}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field fxFlex appearance="outline">
+                <mat-label>Location</mat-label>
+                <mat-select formControlName="location">
+                    <mat-option *ngFor="let itemLocation of listLocation" [value]="itemLocation">
+                        {{itemLocation}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field fxFlex appearance="outline">
+                <mat-label>Medium</mat-label>
+                <mat-select formControlName="medium">
+                    <mat-option *ngFor="let itemMedium of listMedium" [value]="itemMedium">
+                        {{itemMedium}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <button type="submit" mat-flat-button color="primary" (click)="calculateAvgSensors()">
+            <span>Calculate</span>
+        </button>
+    </div>
+    <br>
+    <div class="card" style="max-width: 1024px;margin: auto;padding: 20px;" *ngIf="plan && !loaderPlan">
+        <div mat-dialog-title>Results</div>
+        <br>
+        <div class="content p-25">
+            <div fxLayout="column" fxLayoutAlign="center">   
+                <div class="plan-descarga-list" fxLayout="row wrap" fxLayoutAlign="center">
+        
+                    <div class="plan-descarga" fxFlex="100" fxFlex.gt-xs="50"
+                         fxFlex.gt-sm="33"  >
+        
+                        <div class="plan-content mat-elevation-z1" fxLayout="column" fxFlex="1 1 auto">
+        
+                            <div class="header" class="completado-bg" fxLayout="row" fxLayoutAlign="center center">
+        
+                                <div class="estado" fxFlex>
+                                    Humidity
+                                </div>
+                                <div class="length" fxLayout="row" fxLayoutAlign="center center">
+                                    <mat-icon>perm_device_information</mat-icon>
+                                    <div class="min">{{plan.sensors.avg_humidity}}</div>
+                                </div>
+        
+                            </div>
+        
+                            <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+                                <div class="h1">Humidity</div>
+                            </div>       
+                        </div>
+                    </div>
+                    <div class="plan-descarga" fxFlex="100" fxFlex.gt-xs="50"
+                         fxFlex.gt-sm="33"  >
+        
+                        <div class="plan-content mat-elevation-z1" fxLayout="column" fxFlex="1 1 auto">
+        
+                            <div class="header" class="completado-bg" fxLayout="row" fxLayoutAlign="center center">
+        
+                                <div class="estado" fxFlex>
+                                    Pressure
+                                </div>
+                                <div class="length" fxLayout="row" fxLayoutAlign="center center">
+                                    <mat-icon>perm_device_information</mat-icon>
+                                    <div class="min">{{plan.sensors.avg_pressure}}</div>
+                                </div>
+        
+                            </div>
+        
+                            <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+                                <div class="h1">Pressure</div>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" mat-flat-button color="primary" (click)="generateQRCode()">
+            <span>Generate QR Code</span>
+        </button>
+    </div>
+
+</div>

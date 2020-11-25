@@ -1,0 +1,36 @@
+@import "~@angular/material/theming";
+
+// SCSS Variables
+@import "var";
+
+// Themes
+@import "themes/default";
+
+// Partials
+@import "partials/helpers";
+@import "partials/scrollbar";
+
+@include mat-core($config);
+
+@include angular-material-theme($uni-theme);
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* .mat-form-field-appearance-fill {
+  .mat-form-field-flex {
+    background-color: #ebebee;
+  }
+}
+
+.mat-form-field-flex {
+    background-color: #ebebee;
+} */
