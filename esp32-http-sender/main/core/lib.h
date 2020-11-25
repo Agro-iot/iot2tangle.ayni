@@ -2,6 +2,7 @@
 #define _LIB_
 #include "lib.c"
 #include "struct-device.h"
+#include "stdlib.h"
 
 void led_blinks (int, int, int);
 void config(struct device *);
