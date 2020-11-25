@@ -18,10 +18,10 @@ struct device {
    const char *ssid_wifi;
    const char *pass_wifi;
    
-   bool isEnable[13];
-   char d[13][10];    /* Sensors Data String */
+   bool isEnable[14];
+   char d[14][10];    /* Sensors Data String */
    const char *s_name[30];    /* Sensors Names */
-   bool isConnected[13];
+   bool isConnected[14];
 
    long interv; 
    
