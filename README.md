@@ -23,4 +23,4 @@ For this project we started with a Hydroponic approach, but in the future, we wi
 
 **Here the explanation video**:
 
-[![video](https://user-images.githubusercontent.com/51343893/100295804-d3f27d80-2f47-11eb-8860-842cf3a3b887.png)](https://www.youtube.com/watch?v=qxbyUm3MuUg&t=1159s)
+[![video](https://user-images.githubusercontent.com/51343893/100295804-d3f27d80-2f47-11eb-8860-842cf3a3b887.png)](https://youtu.be/qxbyUm3MuUg)
