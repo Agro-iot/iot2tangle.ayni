@@ -20,3 +20,7 @@ Ayni, thanks to IOTA, could be adapted to sell produced goods through friction-l
 
 ### Future Challenges
 For this project we started with a Hydroponic approach, but in the future, we will transition to an Aquaponic System. In its simplest form, aquaponics replicates the nature by growing fish and vegetables providing huge efficiencies related to land and water use, removing the need of pesticides and antibiotics. An aquaponic system creates a symbiotic relationship between all the organisms within the system and is always aiming to reach its homeostasis.
+
+[![video](https://user-images.githubusercontent.com/51343893/99929036-e8950280-2d08-11eb-9397-f1e4fcdfb56d.png)](https://www.youtube.com/watch?v=qxbyUm3MuUg&t=1159s)
+
+
