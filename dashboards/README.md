@@ -7,7 +7,9 @@
 2. Create a new Dashboard and add a new pannel to it. 
 3. Select Keepy as your Data source for the new Panel.
 4. Use the query editor to adjust the SQL sentence.
-5. You can adjust the following queries to build new panels for your sensors. Keep in mind the JSON Structure. Here some usefull tools [JSON Parser](https://jsonformatter.org/json-parser)
+5. You can adjust the following queries to build new panels for your sensors. Keep in mind the JSON Structure. Here some usefull tools:
+* [JSON Parser](https://jsonformatter.org/json-parser)
+* [JSON Intro](https://www.w3schools.com/js/js_json_intro.asp)
 
 
 ## Soil Humidity
