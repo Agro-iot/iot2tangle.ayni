@@ -15,7 +15,7 @@ In addition, Aquaponics and Hydroponics are proven techniques that has been pick
 
 Ayni means “to help” in quechua; our project aims to help small farmers to discover the benefits Hydroponics and Aquaponics by developing an automated system integrated with IOTA Tangle.
 
-## Ayni Web Application
+## [Ayni Web Application](https://github.com/Agro-iot/iot2tangle.ayni/wiki/Ayni-Web-Application)
 
 ![image](https://user-images.githubusercontent.com/53459292/100395475-116e0e00-300f-11eb-8e61-b1424428940f.png)
 
