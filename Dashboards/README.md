@@ -5,7 +5,7 @@
 
 2. Create a new Dashboard and add a new pannel to it. You can adjust the following queries to quickly add the json data from your sensors.
 
-# Soil Humidity
+## Soil Humidity
 ```
 SELECT tt.id as time_sec,tt.metric,
        CAST(tt.value AS DECIMAL(10,2)) as value
@@ -17,7 +17,7 @@ FROM messages) tt
 WHERE tt.id > 1605812340
 ORDER BY tt.id ASC
 ```
-# Air Humidity
+## Air Humidity
 ```
 SELECT tt.id as time_sec,tt.metric,
        CAST(tt.value AS DECIMAL(10,2)) as value
@@ -29,7 +29,7 @@ FROM messages) tt
 WHERE tt.id > 1605193200
 ORDER BY tt.id ASC
 ```
-# Temperatue
+## Temperatue
 ```
 SELECT tt.id as time_sec,tt.metric,
        CAST(tt.value AS DECIMAL(10,2)) as value
@@ -41,7 +41,7 @@ FROM messages) tt
 WHERE tt.id > 1605193200
 ORDER BY tt.id ASC
 ```
-# Water Pump Status
+## Water Pump Status
 ```
 SELECT tt.id as time_sec,tt.metric,
        CAST(tt.value AS DECIMAL(10,2)) as value
@@ -53,7 +53,7 @@ FROM messages) tt
 WHERE tt.id > 1606330740
 ORDER BY tt.id ASC
 ```
-# Preassure
+## Preassure
 ```
 SELECT tt.id as time_sec,tt.metric,
        CAST(tt.value AS DECIMAL(10,2)) as value
