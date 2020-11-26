@@ -3,7 +3,7 @@
     <mat-icon class="text-secondary">chevron_right</mat-icon>
     <span class="text-secondary">Production</span>
 </div>
-<div style="margin: 25px 25px;">
+<div style="margin: 25px 25px;" id="academy-courses">
     <div class="card" style="max-width: 1024px;margin: auto;padding: 20px;">
         <div mat-dialog-title>Average Sensor</div>
         <br>
@@ -15,7 +15,7 @@
                 <mat-datepicker #startDatePicker></mat-datepicker>
             </mat-form-field>
             <mat-form-field fxFlex appearance="outline">
-                <mat-label>Planting Date</mat-label>
+                <mat-label>Harveting Date</mat-label>
                 <input name="harveting_date" formControlName="harveting_date" matInput
                     [matDatepicker]="startDatePicker2">
                 <mat-datepicker-toggle matSuffix [for]="startDatePicker2"></mat-datepicker-toggle>
@@ -56,60 +56,42 @@
     <div class="card" style="max-width: 1024px;margin: auto;padding: 20px;" *ngIf="plan && !loaderPlan">
         <div mat-dialog-title>Results</div>
         <br>
-        <div class="content p-25">
-            <div fxLayout="column" fxLayoutAlign="center">   
-                <div class="plan-descarga-list" fxLayout="row wrap" fxLayoutAlign="center">
-        
-                    <div class="plan-descarga" fxFlex="100" fxFlex.gt-xs="50"
-                         fxFlex.gt-sm="33"  >
-        
-                        <div class="plan-content mat-elevation-z1" fxLayout="column" fxFlex="1 1 auto">
-        
-                            <div class="header" class="completado-bg" fxLayout="row" fxLayoutAlign="center center">
-        
-                                <div class="estado" fxFlex>
-                                    Humidity
-                                </div>
-                                <div class="length" fxLayout="row" fxLayoutAlign="center center">
-                                    <mat-icon>perm_device_information</mat-icon>
-                                    <div class="min">{{plan.sensors.avg_humidity}}</div>
-                                </div>
-        
-                            </div>
-        
-                            <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
-                                <div class="h1">Humidity</div>
-                            </div>       
+    
+        <div class="plan-descarga-list" fxLayout="row wrap" fxLayoutAlign="center">
+
+            <div class="plan-descarga" *ngFor="let item of recordJson(plan)" fxFlex="100" fxFlex.gt-xs="50"
+                fxFlex.gt-sm="33">
+
+                <div class="plan-content mat-elevation-z1" fxLayout="column" fxFlex="1 1 auto">
+
+                    <div class="header pendiente-bg"  fxLayout="row" fxLayoutAlign="center center">
+
+                        <div class="estado" fxFlex>
+                            {{
+                                item.key === 'avg_soilHumidity' ? 'Soil Humidity' : 
+                                item.key === 'avg_humidity' ? 'Humidity' : 
+                                item.key=== 'avg_temperature' ? 'Temperature' :
+                                item.key=== 'avg_pressure' ? 'Pressure' :
+                                item.key
+                            }}
                         </div>
+
+                        <div class="length" fxLayout="row" fxLayoutAlign="center center">
+                            <mat-icon>sensor_window</mat-icon>
+                        </div>
+
                     </div>
-                    <div class="plan-descarga" fxFlex="100" fxFlex.gt-xs="50"
-                         fxFlex.gt-sm="33"  >
-        
-                        <div class="plan-content mat-elevation-z1" fxLayout="column" fxFlex="1 1 auto">
-        
-                            <div class="header" class="completado-bg" fxLayout="row" fxLayoutAlign="center center">
-        
-                                <div class="estado" fxFlex>
-                                    Pressure
-                                </div>
-                                <div class="length" fxLayout="row" fxLayoutAlign="center center">
-                                    <mat-icon>perm_device_information</mat-icon>
-                                    <div class="min">{{plan.sensors.avg_pressure}}</div>
-                                </div>
-        
-                            </div>
-        
-                            <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
-                                <div class="h1">Pressure</div>
-                            </div>       
-                        </div>
+
+                    <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+                        <div class="h1">{{item.value == 0 ? '--': item.value}}</div>
                     </div>
                 </div>
             </div>
         </div>
-        <button type="submit" mat-flat-button color="primary" (click)="generateQRCode()">
-            <span>Generate QR Code</span>
-        </button>
+        <div fxLayout="row wrap" style="padding-left: 15px;">
+            <button  mat-flat-button color="primary" (click)="generateQRCode(plan.id)">
+                <span>Generate QR Code</span>
+            </button>
+        </div>
     </div>
-
 </div>

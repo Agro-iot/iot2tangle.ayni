@@ -1,7 +1,6 @@
 import { Component, Renderer2, Inject } from '@angular/core';
 import { Platform } from '@angular/cdk/platform';
 import { DOCUMENT } from '@angular/common';
-import { AuthService } from './auth/auth.service';
 import { NavigationService } from 'src/@uni/services/navigation.service';
 
 @Component({
@@ -15,14 +14,8 @@ export class AppComponent {
   constructor(private navigationService: NavigationService,
               private renderer: Renderer2,
               private platform: Platform,
-              @Inject(DOCUMENT) private document: Document,
-              private authService: AuthService) {
+              @Inject(DOCUMENT) private document: Document) {
 
-     /*  const potentialToken = localStorage.getItem('auth-token');
-      if (potentialToken !== null) {
-        this.authService.setToken(potentialToken);
-      }
- */
       if (this.platform.BLINK) {
       this.renderer.addClass(this.document.body, 'is-blink');
     }

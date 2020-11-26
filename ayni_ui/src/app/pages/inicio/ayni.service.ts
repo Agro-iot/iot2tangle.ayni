@@ -10,12 +10,16 @@ import { PlanProduction, Parameters } from './models';
 export class AyniService {
 
   url: string = environment.URL_API;
-  
+
   constructor(private http: HttpClient) {
   }
 
   calculateAvgSensors(param: Parameters): Observable<PlanProduction> {
     return this.http.get<PlanProduction>(`${this.url}/avgSensors?planting_date=${param.planting_date}&harveting_date=${param.harveting_date}&medium=${param.medium}&seed=${param.seed}&location=${param.location}`);
+  }
+
+  generateQRCode(id: number): Observable<Blob> {
+    return this.http.get(`${this.url}/qrcode/${id}`, { responseType: 'blob' });
   }
 
 }

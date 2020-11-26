@@ -33,6 +33,31 @@ export class PlanProductionComponent implements OnInit {
     });
   }
 
+  recordJson(loaderPlan: PlanProduction) {
+    let result = [];
+    for (let i in loaderPlan.sensors) {
+      result.push({ 'key': i, 'value': loaderPlan.sensors[i] });
+    }
+
+    return result;
+  }
+
+  generateQRCode(id: number) {
+
+    this.ayniService.generateQRCode(id).subscribe(data => {
+      const url = window.URL.createObjectURL(data);
+      const a = document.createElement('a');
+      a.setAttribute('style', 'display:none');
+      document.body.appendChild(a);
+      a.href = url;
+      a.download = 'qrcode.png';
+      a.click();
+    },
+    err => {
+        console.error(err);
+    })
+  }
+
   calculateAvgSensors() {
     let param: Parameters = {} as Parameters;
     console.log(this.form);
