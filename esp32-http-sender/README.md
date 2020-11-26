@@ -106,7 +106,8 @@ cu -l /dev/ttyUSB0 -s 115200
 
 The following screenshot is a reading of the *Serial Port*, you should see something like this:
 
-![Raspberry with BME280 sending data to the Tangle](https://i.postimg.cc/cH6TWpXP/Screenshot-from-2020-10-16-11-33-05.png)
+![ESP32-HTTP-SENDER](https://user-images.githubusercontent.com/51343893/100395563-ad434e00-2ffe-11eb-8d20-121491b92c6d.png)
+
 
 
 # Setting up the Streams HTTP Gateway
