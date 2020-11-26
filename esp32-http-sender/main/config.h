@@ -27,7 +27,7 @@ bool isEnable_Accelerometer_Z = true;
 bool isEnable_Gyroscope_X = true;
 bool isEnable_Gyroscope_Y = true;
 bool isEnable_Gyroscope_Z = true;
-bool isEnable_sen0193 = true;
+bool isEnable_SoilHumidity = true;
 bool isEnable_WaterPump = true;
 
 /* Interval of time */
