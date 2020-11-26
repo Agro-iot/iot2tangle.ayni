@@ -1,4 +1,5 @@
-# Using Grafana as a Sensor Dashboard
+# Using Hornet's Grafana and Keepy to build a Sensor Dashboard
+
 1. First set up a connection to [Keepy DB](https://github.com/iot2tangle/Keepy). This option is under Settings > Data Sources
 
 ![image](https://user-images.githubusercontent.com/51343893/100308710-43776580-2f66-11eb-9f80-f84a177a8ca0.png)
@@ -65,3 +66,6 @@ FROM messages) tt
 WHERE tt.id > 1605193200
 ORDER BY tt.id ASC
 ```
+The Dashboards will look as follow:
+
+![Hornet Grafana Sensor Dashboard](https://user-images.githubusercontent.com/51343893/100385381-a9540380-2fdf-11eb-9202-0956b0fdfb78.png)
