@@ -1,7 +1,8 @@
 # Using Grafana as a Sensor Dashboard
-1. First set up a connection to Keepy DB. This option is under Settings > Data Sources
+1. First set up a connection to [Keepy DB](https://github.com/iot2tangle/Keepy). This option is under Settings > Data Sources
 
 ![image](https://user-images.githubusercontent.com/51343893/100308710-43776580-2f66-11eb-9f80-f84a177a8ca0.png)
+
 2. Create a new Dashboard and add a new pannel to it. You can adjust the following queries to quickly add the json data from your sensors.
 
 # Soil Humidity
