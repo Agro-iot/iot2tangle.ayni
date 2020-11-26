@@ -38,7 +38,7 @@ void config(struct device *z)
 	z->isEnable[9] = isEnable_Gyroscope_X;
 	z->isEnable[10] = isEnable_Gyroscope_Y;
 	z->isEnable[11] = isEnable_Gyroscope_Z;
-	z->isEnable[12] = isEnable_sen0193;
+	z->isEnable[12] = isEnable_SoilHumidity;
 	z->isEnable[13] = isEnable_WaterPump;
 
 	z->s_name[0] = "InternalTemperature";
@@ -367,7 +367,7 @@ void generateJson(struct device *z)
 	if (check_sen0193())
 	{
 		aux = 0;
-		strcat(z->json, ",{\"agent\":\"WaterPump\",\"data\":[");
+		strcat(z->json, ",{\"sensor\":\"WaterPump\",\"data\":[");
 		for (i = 0; i < 1; i++)
 		{
 			if (z->isEnable[i + 13])
