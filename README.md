@@ -16,7 +16,7 @@ In addition, Aquaponics and Hydroponics are proven techniques that has been pick
 Ayni means “to help” in quechua; our project aims to help small farmers to discover the benefits Hydroponics and Aquaponics by developing an automated system integrated with IOTA Tangle.
 
 ### Potential
-Ayni, thanks to IOTA, could be adapted to sell produced goods through friction-less micro-payments with production data and without intermediaries, to sell performance data, and optimize the growth process of vegetables and fish.
+Ayni, thanks to IOTA, could be adapted to establish a **distributed data, and produce, market place** specialized in farming. Were customers can buy local produced goods through **friction-less micro-payments** and **verify the quality** by accessing **production data**, without intermediaries. Also, farmers can sell and by **production and demand data** of other local producers to **optimize their production** and anticipate to **market trends** before these happen.
 
 ### Future Challenges
 For this project we started with a Hydroponic approach, but in the future, we will transition to an Aquaponic System. In its simplest form, aquaponics replicates the nature by growing fish and vegetables providing huge efficiencies related to land and water use, removing the need of pesticides and antibiotics. An aquaponic system creates a symbiotic relationship between all the organisms within the system and is always aiming to reach its homeostasis.
