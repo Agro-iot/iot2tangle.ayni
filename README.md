@@ -19,7 +19,10 @@ Ayni means “to help” in quechua; our project aims to help small farmers to d
 Ayni, thanks to IOTA, could be adapted to establish a **distributed farming market place**; in where, farmers can sell and by **production and demand data** of other local producers to **optimize their production** and anticipate to **market trends** before these happen, and customers can buy local produced goods through **friction-less micro-payments** and **verify the quality** by accessing **production data**, and **sell consumption data**, without intermediaries.
 
 ### Future Challenges
-For this project we started with a Hydroponic approach, but in the future, we will transition to an Aquaponic System. In its simplest form, aquaponics replicates the nature by growing fish and vegetables providing huge efficiencies related to land and water use, removing the need of pesticides and antibiotics. An aquaponic system creates a symbiotic relationship between all the organisms within the system and is always aiming to reach its homeostasis.
+Develop Ayni App further, and adding more sensors for different farming scenarios.
+
+We started with a Hydroponic approach, but in the future, we will prioritize for an Aquaponic System. In its simplest form, aquaponics replicates the nature by growing fish and vegetables providing huge efficiencies related to land and water use, removing the need of fertilizers, pesticides, and antibiotics. An aquaponic system creates a symbiotic relationship between all the organisms within the system and is always aiming to reach its homeostasis.
+
 
 ## Ayni App
 The [Ayni App](https://github.com/Agro-iot/iot2tangle.ayni/wiki/Ayni-App) allows farmers to **consolidate production data** in the **IOTA tangle** to generate **QR certificate labels** that can be attached to the product package. 
