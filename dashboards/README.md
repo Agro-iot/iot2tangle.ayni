@@ -1,12 +1,15 @@
 # Using Hornet's Grafana and Keepy to build a Sensor Dashboard
 
 1. First set up a connection to [Keepy DB](https://github.com/iot2tangle/Keepy). This option is under Settings > Data Sources
-
-![image](https://user-images.githubusercontent.com/51343893/100308710-43776580-2f66-11eb-9f80-f84a177a8ca0.png)
+![Keepy Data Source](https://user-images.githubusercontent.com/51343893/100308710-43776580-2f66-11eb-9f80-f84a177a8ca0.png)
 
 2. Create a new Dashboard and add a new pannel to it. 
+![New Dashboard](https://user-images.githubusercontent.com/51343893/100419181-498e4480-3041-11eb-99ca-d9c6b3cd39f5.png)
+
 3. Select Keepy as your Data source for the new Panel.
-4. Use the query editor to adjust the SQL sentence.
+![Query Editor](https://user-images.githubusercontent.com/51343893/100419370-a8ec5480-3041-11eb-96ac-6b5f639ae466.png)
+
+4. Use the query editor to create the SQL sentence.
 5. You can adjust the following queries to build new panels for your sensors. Keep in mind the JSON Structure. Here some usefull tools:
 * [JSON Parser](https://jsonformatter.org/json-parser)
 * [JSON Intro](https://www.w3schools.com/js/js_json_intro.asp)
@@ -72,6 +75,6 @@ FROM messages) tt
 WHERE tt.id > 1605193200
 ORDER BY tt.id ASC
 ```
-The Dashboards will look as follow:
+The Sensor Dashboards will look as follow:
 
-![Hornet Grafana Sensor Dashboard](https://user-images.githubusercontent.com/51343893/100385381-a9540380-2fdf-11eb-9202-0956b0fdfb78.png)
+![Sensor Dashboard](https://user-images.githubusercontent.com/51343893/100419281-82c6b480-3041-11eb-803e-f906038415d3.png)
