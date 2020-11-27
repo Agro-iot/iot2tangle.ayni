@@ -3,7 +3,7 @@
 1. First set up a connection to [Keepy DB](https://github.com/iot2tangle/Keepy). This option is under Settings > Data Sources
 ![Keepy Data Source](https://user-images.githubusercontent.com/51343893/100308710-43776580-2f66-11eb-9f80-f84a177a8ca0.png)
 
-2. Create a new Dashboard and add a new pannel to it. 
+2. Create a Sensor Dashboard by going to manage and clicking New Dashboard. Then, add your first pannel to it. 
 ![New Dashboard](https://user-images.githubusercontent.com/51343893/100419181-498e4480-3041-11eb-99ca-d9c6b3cd39f5.png)
 
 3. Select Keepy as your Data source for the new Panel.
