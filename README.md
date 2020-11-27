@@ -1,7 +1,7 @@
 ![Ayni_2 0](https://user-images.githubusercontent.com/51343893/99911628-f9b32480-2cb2-11eb-9516-e8e3f39edd2d.png)
 
 ## Subject
-Ayni is an Open Source Irrigation Control System, which has been developed to ease the access of small farmers to edge technology. It allows to sense, monitor, present and label the farming production data in an easy fashion. 
+Ayni is an Open Source Irrigation Control System, which has been developed to ease the access of small farmers to cutting edge technology. It allows to sense, monitor, present and label the farming production data in an easy fashion. 
 
 **For full instructions, visit the [Ayni Wiki](https://github.com/Agro-iot/iot2tangle.ayni/wiki)**.
 
