@@ -15,17 +15,18 @@ In addition, Aquaponics and Hydroponics are proven techniques that has been pick
 
 Ayni means “to help” in quechua; our project aims to help small farmers to discover the benefits Hydroponics and Aquaponics by developing an automated system integrated with IOTA Tangle.
 
-## [Ayni Web Application](https://github.com/Agro-iot/iot2tangle.ayni/wiki/Ayni-Web-Application)
-
-![image](https://user-images.githubusercontent.com/53459292/100395475-116e0e00-300f-11eb-8e61-b1424428940f.png)
-
-![image](https://user-images.githubusercontent.com/53459292/100395482-1a5edf80-300f-11eb-907f-90ce39b58281.png)
-
 ### Potential
 Ayni, thanks to IOTA, could be adapted to sell produced goods through friction-less micro-payments with production data and without intermediaries, to sell performance data, and optimize the growth process of vegetables and fish.
 
 ### Future Challenges
 For this project we started with a Hydroponic approach, but in the future, we will transition to an Aquaponic System. In its simplest form, aquaponics replicates the nature by growing fish and vegetables providing huge efficiencies related to land and water use, removing the need of pesticides and antibiotics. An aquaponic system creates a symbiotic relationship between all the organisms within the system and is always aiming to reach its homeostasis.
+
+## [Ayni App](https://github.com/Agro-iot/iot2tangle.ayni/wiki/Ayni-App)
+The [Ayni App](https://github.com/Agro-iot/iot2tangle.ayni/tree/main/ayni_ui) allows farmers to **consolidate production data** in the **IOTA tangle** and generate **QR certificate labels** that can be attached to the product package. 
+
+![image](https://user-images.githubusercontent.com/53459292/100395475-116e0e00-300f-11eb-8e61-b1424428940f.png)
+
+![image](https://user-images.githubusercontent.com/53459292/100395482-1a5edf80-300f-11eb-907f-90ce39b58281.png)
 
 **Here the explanation video**:
 
