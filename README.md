@@ -28,5 +28,5 @@ The [Ayni App](https://github.com/Agro-iot/iot2tangle.ayni/wiki/Ayni-App) allows
 
 ![image](https://user-images.githubusercontent.com/53459292/100395482-1a5edf80-300f-11eb-907f-90ce39b58281.png)
 
-## Project video:
+## Project video
 [![video](https://user-images.githubusercontent.com/51343893/100295804-d3f27d80-2f47-11eb-8860-842cf3a3b887.png)](https://youtu.be/qxbyUm3MuUg)
