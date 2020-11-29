@@ -10,7 +10,7 @@ import { AyniLayoutModule } from './ayni-layout/ayni-layout.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

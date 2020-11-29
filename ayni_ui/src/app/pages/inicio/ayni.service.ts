@@ -22,4 +22,8 @@ export class AyniService {
     return this.http.get(`${this.url}/qrcode/${id}`, { responseType: 'blob' });
   }
 
+  getAvgSensors(hash: string): Observable<PlanProduction> {
+    return this.http.get<PlanProduction>(`${this.url}/production/${hash}`);
+  }
+
 }

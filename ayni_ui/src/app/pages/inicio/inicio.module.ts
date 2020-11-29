@@ -7,9 +7,10 @@ import { MatButtonModule, MatButtonToggleModule, MatCheckboxModule, MatDatepicke
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PlanHistoryComponent } from './plan-history/plan-history.component';
 
 @NgModule({
-  declarations: [HomeComponent, PlanProductionComponent],
+  declarations: [HomeComponent, PlanProductionComponent, PlanHistoryComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
