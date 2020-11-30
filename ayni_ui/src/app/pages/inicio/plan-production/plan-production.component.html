@@ -10,7 +10,7 @@
         <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="10px" [formGroup]="form">
             <mat-form-field fxFlex appearance="outline">
                 <mat-label>Planting Date</mat-label>
-                <input name="planting_date" formControlName="planting_date" matInput [matDatepicker]="startDatePicker">
+                <input name="planting_date" formControlName="planting_date" matInput [matDatepicker]="startDatePicker" >
                 <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #startDatePicker></mat-datepicker>
             </mat-form-field>

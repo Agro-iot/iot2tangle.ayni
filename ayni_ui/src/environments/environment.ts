@@ -4,8 +4,10 @@
 
 export const environment = {
   production: false,
-  URL_API:'http://ayni.burgeons.ca:4444/api/v1',
+  //URL_API:'http://ayni.burgeons.ca:4444/api/v1',
+  URL_API:'http://localhost:4444/api/v1',
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

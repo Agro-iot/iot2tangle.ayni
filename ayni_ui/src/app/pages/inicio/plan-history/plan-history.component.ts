@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { AyniService } from '../ayni.service';
 import { Parameters, PlanProduction } from '../models';
 
@@ -16,20 +17,32 @@ export class PlanHistoryComponent implements OnInit {
   listMedium: string[] = ['medium01', 'medium02', 'medium03'];
   plan: PlanProduction;
   loaderPlan = false;
+  hash:string;
   constructor(
     private fb: FormBuilder,
-    private ayniService: AyniService
+    private ayniService: AyniService,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
 
-    this.form = this.fb.group({
-      planting_date: [new Date],
-      harveting_date: [new Date],
-      seed: [''],
-      location: [''],
-      medium: [''],
-    });
+    this.hash = this.activatedRoute.snapshot.params['hash'];
+    this.loaderPlan = true;
+    this.ayniService.getAvgSensors(this.hash).subscribe(
+      data => {
+        this.loaderPlan = false;
+        this.plan = data;
+        this.form = this.fb.group({
+          planting_date: [new Date(this.plan.parameters.planting_date)],
+          harveting_date: [new Date(this.plan.parameters.harveting_date)],
+          seed: [this.plan.parameters.seed],
+          location: [this.plan.parameters.location],
+          medium: [this.plan.parameters.medium],
+        });
+      }
+    )
+
+    
   }
 
   recordJson(loaderPlan: PlanProduction) {
@@ -37,55 +50,6 @@ export class PlanHistoryComponent implements OnInit {
     for (let i in loaderPlan.sensors) {
       result.push({ 'key': i, 'value': loaderPlan.sensors[i] });
     }
-
     return result;
   }
-
-  generateQRCode(id: number) {
-
-    this.ayniService.generateQRCode(id).subscribe(data => {
-      const url = window.URL.createObjectURL(data);
-      const a = document.createElement('a');
-      a.setAttribute('style', 'display:none');
-      document.body.appendChild(a);
-      a.href = url;
-      a.download = 'qrcode.png';
-      a.click();
-    },
-    err => {
-        console.error(err);
-    })
-  }
-
-  calculateAvgSensors() {
-    let param: Parameters = {} as Parameters;
-    console.log(this.form);
-
-    const planting_date = this.form.value['planting_date'];
-    const planting_date_timestamp = Math.floor(planting_date.getTime() / 1000.0);
-    param.planting_date = planting_date_timestamp;
-
-    const harveting_date = this.form.value['harveting_date'];
-    const harveting_date_timestamp = Math.floor(harveting_date.getTime() / 1000.0);
-    param.harveting_date = harveting_date_timestamp;
-
-    param.location = this.form.value['location'];
-    param.medium = this.form.value['medium'];
-    param.seed = this.form.value['seed'];
-
-    console.log(param);
-    this.loaderPlan = true;
-    this.ayniService.calculateAvgSensors(param).subscribe(
-      data => {
-        this.plan = data;
-        this.loaderPlan = false;
-        console.log('data', data);
-      },
-      error => {
-        this.loaderPlan = false;
-        console.error(error);
-      }
-    )
-  }
-
 }

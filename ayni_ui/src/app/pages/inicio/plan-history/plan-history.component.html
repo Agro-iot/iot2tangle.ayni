@@ -3,21 +3,21 @@
     <mat-icon class="text-secondary">chevron_right</mat-icon>
     <span class="text-secondary">Production</span>
 </div>
-<div style="margin: 25px 25px;" id="academy-courses">
+<div style="margin: 25px 25px;" id="academy-courses" *ngIf="plan && !loaderPlan">
     <div class="card" style="max-width: 1024px;margin: auto;padding: 20px;">
         <div mat-dialog-title>History Sensor</div>
         <br>
         <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="10px" [formGroup]="form">
             <mat-form-field fxFlex appearance="outline">
                 <mat-label>Planting Date</mat-label>
-                <input name="planting_date" formControlName="planting_date" matInput [matDatepicker]="startDatePicker">
+                <input name="planting_date" formControlName="planting_date" matInput [matDatepicker]="startDatePicker" disabled>
                 <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #startDatePicker></mat-datepicker>
             </mat-form-field>
             <mat-form-field fxFlex appearance="outline">
                 <mat-label>Harveting Date</mat-label>
                 <input name="harveting_date" formControlName="harveting_date" matInput
-                    [matDatepicker]="startDatePicker2">
+                    [matDatepicker]="startDatePicker2" disabled>
                 <mat-datepicker-toggle matSuffix [for]="startDatePicker2"></mat-datepicker-toggle>
                 <mat-datepicker #startDatePicker2></mat-datepicker>
             </mat-form-field>
@@ -25,7 +25,7 @@
         <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="10px" [formGroup]="form">
             <mat-form-field fxFlex appearance="outline">
                 <mat-label>Seed</mat-label>
-                <mat-select formControlName="seed">
+                <mat-select formControlName="seed" disabled>
                     <mat-option *ngFor="let itemSeed of listSeed" [value]="itemSeed">
                         {{itemSeed}}
                     </mat-option>
@@ -33,7 +33,7 @@
             </mat-form-field>
             <mat-form-field fxFlex appearance="outline">
                 <mat-label>Location</mat-label>
-                <mat-select formControlName="location">
+                <mat-select formControlName="location" disabled>
                     <mat-option *ngFor="let itemLocation of listLocation" [value]="itemLocation">
                         {{itemLocation}}
                     </mat-option>
@@ -41,19 +41,16 @@
             </mat-form-field>
             <mat-form-field fxFlex appearance="outline">
                 <mat-label>Medium</mat-label>
-                <mat-select formControlName="medium">
+                <mat-select formControlName="medium" disabled>
                     <mat-option *ngFor="let itemMedium of listMedium" [value]="itemMedium">
                         {{itemMedium}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
-        <button type="submit" mat-flat-button color="primary" (click)="calculateAvgSensors()">
-            <span>Calculate</span>
-        </button>
     </div>
     <br>
-    <div class="card" style="max-width: 1024px;margin: auto;padding: 20px;" *ngIf="plan && !loaderPlan">
+    <div class="card" style="max-width: 1024px;margin: auto;padding: 20px;" >
         <div mat-dialog-title>Results</div>
         <br>
     
@@ -87,11 +84,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div fxLayout="row wrap" style="padding-left: 15px;">
-            <button  mat-flat-button color="primary" (click)="generateQRCode(plan.id)">
-                <span>Generate QR Code</span>
-            </button>
         </div>
     </div>
 </div>
