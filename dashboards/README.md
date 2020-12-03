@@ -77,4 +77,4 @@ ORDER BY tt.id ASC
 ```
 The Sensor Dashboards will look as follow:
 
-![Sensor Dashboard](https://user-images.githubusercontent.com/51343893/100419281-82c6b480-3041-11eb-803e-f906038415d3.png)
+![Sensor Dashboard](https://user-images.githubusercontent.com/51343893/100407670-46d22600-3026-11eb-8f33-5f853eecdba2.png)
