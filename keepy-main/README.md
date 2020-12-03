@@ -1,4 +1,4 @@
-# Keepy
+# Keepy with Timestamps
 
 ![Keepy!](https://iot2tangle.io/assets/screenshots/keepy_header.jpg)
 
