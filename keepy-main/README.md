@@ -40,10 +40,11 @@ sudo ufw allow 3002
 
 ## Keepy Installation
 
-Get the Keepy repository from the I2T Hub
+Get the repository from Ayni
 
 ```
-git clone https://github.com/iot2tangle/Keepy.git
+git clone https://github.com/Agro-iot/iot2tangle.ayni.git
+cd iot2tangle.ayni/keepy-main
 ```
 
 Head to the Keepy directory and edit the **_keepy.sql_** file to setup your mysql user and password.
