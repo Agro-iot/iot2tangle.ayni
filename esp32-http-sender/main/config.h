@@ -7,11 +7,11 @@
 const char *id_name = "ESP32-HTTP";
 
 /* Network Configuration */
-const char *ssid_WiFi = "Andes";
-const char *pass_WiFi = "Erreconerre123!";
+const char *ssid_WiFi = "My_Wi-Fi_ID";
+const char *pass_WiFi = "My_Wifi_Password";
 
 /* HTTP Endpoint Configuration */
-const char *address = "10.0.9.9/messages"; /* Endpoint address (HTTP), must NOT include 'http://xxx' or 'tcp://xxx' */
+const char *address = "MY_LOCAL_IP_ADDRES/messages"; /* Endpoint address (HTTP), must NOT include 'http://xxx' or 'tcp://xxx' */
 int port = 3002;
 
 /* Enable Sensors */
